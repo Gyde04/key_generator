@@ -1,118 +1,155 @@
-# RSA Key Generator
+# 🔐 RSA Key Generator
 
-A Python-based tool that generates RSA public and private key pairs using the cryptography library. This tool provides a secure way to generate cryptographic keys for various security applications.
+A Python-based tool for generating secure RSA public and private key pairs using the `cryptography` library. Ideal for security applications, this tool simplifies the creation and storage of cryptographic keys with a straightforward, reliable implementation.
+
+---
 
 ## 🚀 Features
 
-- Generates 2048-bit RSA key pairs
-- Creates both public and private keys in PEM format
-- Secure key generation using industry-standard cryptography library
-- Simple and easy-to-use implementation
-- Automatic key file creation
+- 🔑 **2048-bit RSA Key Generation**: Provides strong encryption and decryption.
+- 📄 **PEM Format Output**: Keys are generated in a widely-used, easily portable format.
+- 🔒 **Secure Key Generation**: Utilizes the industry-standard `cryptography` library for robust security.
+- 🗂️ **Automatic Key File Creation**: Saves keys in `.pem` files for easy storage and usage.
+- 🛠️ **Simple and Flexible**: Minimal setup and straightforward usage.
+
+---
 
 ## 📋 Prerequisites
 
-Before running this project, make sure you have the following installed:
-- Python 3.x
-- pip (Python package manager)
+Ensure the following are installed:
+
+- **Python** 3.x
+- **pip** (Python package manager)
+
+---
 
 ## 🔧 Installation
 
-1. Clone the repository
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Gyde04/key_generator.git
+   cd key_generator
+   ```
+
+2. **Install Required Packages**
+   ```bash
+   pip3 install cryptography
+   ```
+
+---
+
+## 💻 Usage
+
+Generate RSA key pairs by running the following command:
+
 ```bash
-git clone https://github.com/Gyde04/key_generator.git
-cd key_generator
-
-  2. Install required packages
-
-bashCopypip3 install cryptography
-💻 Usage
-
- Run the script:
-
-bashCopypython3 generate_keys.py
+python3 generate_keys.py
+```
 
 The script will generate two files:
+- **`private_key.pem`**: Contains the private key.
+- **`public_key.pem`**: Contains the public key.
 
+Both keys will also display in the terminal for immediate viewing.
 
-private_key.pem: Contains the private key
-public_key.pem: Contains the public key
+---
 
-The keys will also be displayed in the terminal for immediate viewing.
-📁 Output Format
-The generated keys are in PEM format:
-Private Key
-Copy-----BEGIN PRIVATE KEY-----
+## 📁 Output Format
+
+The generated keys are in **PEM** format:
+
+### Private Key Example
+```
+-----BEGIN PRIVATE KEY-----
 [Base64 encoded private key]
 -----END PRIVATE KEY-----
-Public Key
-Copy-----BEGIN PUBLIC KEY-----
+```
+
+### Public Key Example
+```
+-----BEGIN PUBLIC KEY-----
 [Base64 encoded public key]
 -----END PUBLIC KEY-----
-🔐 Security Considerations
+```
 
-Never share your private key
-Store private keys in a secure location
-Use appropriate file permissions to protect key files
-Consider encrypting private keys with a password for additional security
-Keep your cryptography library updated to the latest version
+---
 
-🛠️ Technical Details
+## 🔐 Security Considerations
 
-Key Type: RSA
-Key Size: 2048 bits
-Format: PKCS#8 (Private Key), SubjectPublicKeyInfo (Public Key)
-Encoding: PEM (Base64 encoded DER)
+- 🚫 **Do not share** your private key.
+- 🔒 Store private keys securely, ideally with restricted access.
+- 🔐 Use appropriate file permissions to protect key files.
+- 🛡️ For additional security, consider encrypting the private key with a password.
+- 📥 **Update** the cryptography library to the latest version to stay protected.
 
-🤝 Contributing
-Contributions are welcome! Here's how you can help:
+---
 
-Fork the repository
-Create a new branch (git checkout -b feature/improvement)
-Make your changes
-Commit your changes (git commit -am 'Add new feature')
-Push to the branch (git push origin feature/improvement)
-Create a Pull Request
+## 🛠️ Technical Details
 
-📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-⚠️ Disclaimer
-This tool is for educational and development purposes. In production environments, ensure you follow proper key management practices and security protocols.
-🔍 Common Issues and Solutions
-Issue: Script not found
-bashCopypython3: can't open file 'generate_keys.py': [Errno 2] No such file or directory
-Solution: Ensure you're in the correct directory containing the script.
-Issue: Module not found
-bashCopyModuleNotFoundError: No module named 'cryptography'
-Solution: Install the required package using pip3 install cryptography
-📞 Contact
+| Property         | Value                 |
+|------------------|-----------------------|
+| **Key Type**     | RSA                   |
+| **Key Size**     | 2048 bits             |
+| **Format**       | PKCS#8 (Private), SubjectPublicKeyInfo (Public) |
+| **Encoding**     | PEM (Base64 encoded DER) |
 
-GitHub: @Gyde04
+---
 
-🙏 Acknowledgments
+## 🤝 Contributing
 
-Cryptography.io for their excellent Python library
-The open-source community for continuous inspiration and support
+Contributions are welcome! To contribute:
 
+1. **Fork** the repository.
+2. **Create** a feature branch:
+   ```bash
+   git checkout -b feature/improvement
+   ```
+3. **Commit** your changes:
+   ```bash
+   git commit -am 'Add new feature'
+   ```
+4. **Push** to the branch:
+   ```bash
+   git push origin feature/improvement
+   ```
+5. **Create a Pull Request** for review.
 
-Created with ❤️ by [Your Name]
-Copy
-This README.md provides:
-1. Clear installation instructions
-2. Usage examples
-3. Security considerations
-4. Technical details
-5. Contributing guidelines
-6. Common issues and solutions
-7. Contact information
-8. Professional formatting with emojis for better readability
+---
 
-You can customize it further by:
-1. Adding specific use cases
-2. Including screenshots
-3. Adding more detailed technical documentation
-4. Including badges (build status, version, etc.)
-5. Adding a changelog section
-6. Including troubleshooting guides
+## 🔍 Common Issues and Solutions
 
-Would you like me to add or modify any specific section?
+- **Issue**: *Script not found*
+  - **Error**: `python3: can't open file 'generate_keys.py': [Errno 2] No such file or directory`
+  - **Solution**: Ensure you are in the directory containing `generate_keys.py`.
+
+- **Issue**: *Module not found*
+  - **Error**: `ModuleNotFoundError: No module named 'cryptography'`
+  - **Solution**: Install the required package with:
+    ```bash
+    pip3 install cryptography
+    ```
+
+---
+
+## 📞 Contact
+
+For questions or suggestions, find me on **GitHub**: [@Gyde04](https://github.com/Gyde04)
+
+---
+
+## 🙏 Acknowledgments
+
+- **Cryptography.io** for providing the robust `cryptography` library.
+- The open-source community for ongoing inspiration and support.
+
+---
+
+## 📝 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## ⚠️ Disclaimer
+This tool is for educational and development purposes. For production use, follow best practices in key management and security protocols.
+
+---
